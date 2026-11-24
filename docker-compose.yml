@@ -1,0 +1,14 @@
+services:
+  crypta:
+    build: .
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      DB_PATH: /data/crypta.db
+    volumes:
+      - crypta-data:/data
+    ports:
+      - "127.0.0.1:8000:8000"   # наружу — только через Caddy/nginx с TLS
+
+volumes:
+  crypta-data:

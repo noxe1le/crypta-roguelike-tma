@@ -1,0 +1,17 @@
+[Unit]
+Description=Crypta — Telegram bot + Mini App
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/crypta
+EnvironmentFile=/opt/crypta/.env
+ExecStart=/opt/crypta/scripts/serve.sh
+Restart=always
+RestartSec=5
+KillMode=control-group
+TimeoutStopSec=15
+
+[Install]
+WantedBy=multi-user.target
