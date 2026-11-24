@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+*.db
+*.db-wal
+*.db-shm
+.pytest_cache/
+.DS_Store
+
+HANDOFF.local.md
+CHEATSHEET.local.md
