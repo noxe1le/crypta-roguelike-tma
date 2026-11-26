@@ -5,6 +5,7 @@ Wants=network-online.target
 
 [Service]
 Type=simple
+# путь подставьте свой: ниже предполагается /opt/crypta
 WorkingDirectory=/opt/crypta
 EnvironmentFile=/opt/crypta/.env
 ExecStart=/opt/crypta/scripts/serve.sh
